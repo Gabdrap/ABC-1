@@ -27,20 +27,17 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-   
+
     int decimal;
+    int base;
     cout << "Введите значение в десятичной системе счисления: ";
     cin >> decimal;
-    
-    string binary = convert(decimal, 2);
-    string octal = convert(decimal, 8);
-    string hexadecimal = convert(decimal, 16);
-    string quinary = convert(decimal, 5);
-    
-    cout << "Двоичное представление: " << binary << endl;
-    cout << "Восьмеричное представление: " << octal << endl;
-    cout << "Шестнадцатеричное представление: " << hexadecimal << endl;
-    cout << "Пятеричное представление: " << quinary << endl;
-        
+    cout << "Введите необходимое основание системы счисления: ";
+    cin >> base;
+
+    string result = convert(decimal, base);
+
+    cout << "Результат: " << result << endl;
+
     return 0;
 }
